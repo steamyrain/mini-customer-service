@@ -1,0 +1,8 @@
+type Query {
+	_: Boolean
+}
+
+interface Audited {
+	createdBy: String
+	updatedBy: String
+}

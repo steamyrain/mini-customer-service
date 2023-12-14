@@ -1,0 +1,30 @@
+application:
+  database:
+    password: master
+    username: postgres
+    port: 5432
+    name: mini_customer
+
+security:
+  jwt:
+    secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+    expiration-time: 86400000
+
+spring:
+  datasource:
+    password: ${application.database.password}
+    username: ${application.database.username}
+    url: jdbc:postgresql://postgres:${application.database.port}/${application.database.name}?useSSL=false
+    hikari:
+      connection-timeout: 60000 #milisecs to wait for connection from pool
+      idle-timeout: 300000 #milisecs connection allowed to sit idle in pool
+      minimumIdle: 1
+      maximumPoolSize: 4
+  graphql:
+    graphiql:
+      enabled: true
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  liquibase:
+    change-log: classpath:/db/changelog.yml

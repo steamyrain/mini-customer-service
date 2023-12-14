@@ -1,0 +1,121 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202312130853
+      author: Reinhard
+      comment: new customer table
+      changes:
+        - tagDatabase:
+            tag: 202312130853
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_customer.sql
+  - changeSet:
+      id: 202312131300
+      author: Reinhard
+      comment: new product table
+      changes:
+        - tagDatabase:
+            tag: 202312131300
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_product.sql
+  - changeSet:
+      id: 202312131301
+      author: Reinhard
+      comment: new tax table
+      changes:
+        - tagDatabase:
+            tag: 202312131301
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_tax.sql
+  - changeSet:
+      id: 202312131302
+      author: Reinhard
+      comment: new product_tax table
+      changes:
+        - tagDatabase:
+            tag: 202312131302
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_product_tax.sql
+  - changeSet:
+      id: 202312131648
+      author: Reinhard
+      comment: new transaction table
+      changes:
+        - tagDatabase:
+            tag: 202312131648
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_transaction.sql
+  - changeSet:
+      id: 202312131649
+      author: Reinhard
+      comment: new transaction_item table
+      changes:
+        - tagDatabase:
+            tag: 202312131649
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_transaction_item.sql
+  - changeSet:
+      id: 202312131936
+      author: Reinhard
+      comment: alter transaction transaction_item
+      changes:
+        - tagDatabase:
+            tag: 202312131936
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/alter_table_tx.sql
+  - changeSet:
+      id: 202312141224
+      author: Reinhard
+      comment: new table user and role
+      changes:
+        - tagDatabase:
+            tag: 202312141224
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_role.sql
+  - changeSet:
+      id: 202312141229
+      author: Reinhard
+      comment: new table user and role
+      changes:
+        - tagDatabase:
+            tag: 202312141229
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/new_table_user_role.sql
+  - changeSet:
+      id: 202312141246
+      author: Reinhard
+      comment: insert role
+      changes:
+        - tagDatabase:
+            tag: 202312141246
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/insert_role.sql
+  - changeSet:
+      id: 202312141250
+      author: Reinhard
+      comment: alter column email
+      changes:
+        - tagDatabase:
+            tag: 202312141246
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/alter_table_users.sql
+  - changeSet:
+      id: 202312141451
+      author: Reinhard
+      comment: insert data
+      changes:
+        - tagDatabase:
+            tag: 202312141451
+        - sqlFile:
+            dbms: postgresql
+            path: db/changelog/insert_data.sql
